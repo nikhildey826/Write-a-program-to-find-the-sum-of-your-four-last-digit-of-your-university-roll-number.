@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    char rollNumber[] = "YOUR_ROLL_NUMBER";
+
+    int sum = 0;
+    int i = 0;
+
+    for (i = strlen(rollNumber) - 4; i < strlen(rollNumber); i++) {
+        if (isdigit(rollNumber[i])) {
+            sum += (rollNumber[i] - '0');
+        }
+    }
+
+    printf("Sum of the last four digits of your roll number: %d\n", sum);
+
+    return 0;
+}
